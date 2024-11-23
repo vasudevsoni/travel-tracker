@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +20,6 @@
   font-weight: 600;
 }
 
-/* CSS Modules feature */
 .nav a:global(.active) {
   color: var(--color-brand--2);
 }
@@ -30,5 +29,68 @@ a.ctaLink:visited {
   background-color: var(--color-brand--2);
   color: var(--color-dark--0);
   padding: 0.8rem 2rem;
-  border-radius: 7px;
+} */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 3rem; /* Added padding for better spacing */
+  background-color: var(--color-dark--2); /* Subtle background for the navbar */
+  border-radius: 8px; /* Rounded edges for a modern look */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  font-weight: 600; /* Added font weight for better emphasis */
+  border-radius: 6px; /* Rounded edges for buttons */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+a.ctaLink:hover,
+a.ctaLink:focus {
+  background-color: var(--color-brand--1); /* Darken the background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover for emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    padding: 1.2rem 2.4rem; /* Adjusted padding for smaller screens */
+  }
+
+  .nav ul {
+    gap: 2rem; /* Reduced gap for smaller screens */
+  }
+
+  .nav a:link,
+  .nav a:visited {
+    font-size: 1.3rem; /* Slightly smaller font size for better mobile readability */
+  }
 }

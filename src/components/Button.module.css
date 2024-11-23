@@ -1,16 +1,15 @@
-.btn {
+/* .btn {
   color: inherit;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 0.8rem 1.6rem;
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 .primary {
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--color-brand--2);
   color: var(--color-dark--1);
 }
@@ -22,7 +21,7 @@
 }
 
 .position {
-  font-weight: 700;
+  font-weight: 600;
   position: absolute;
   z-index: 1000;
   font-size: 1.4rem;
@@ -32,4 +31,60 @@
   background-color: var(--color-brand--2);
   color: var(--color-dark--1);
   box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16);
+} */
+
+.btn {
+  color: inherit;
+  text-transform: capitalize;
+  padding: 0.9rem 1.8rem; /* Increased slightly for better clickability */
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded edges for a modern, cohesive look */
+  transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Smooth interactions */
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.primary {
+  font-weight: 600;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.primary:hover {
+  background-color: var(--color-brand--1); /* Slightly lighter on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.back {
+  font-weight: 600;
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 8px; /* Matches rounded corners */
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.back:hover {
+  color: var(--color-brand--2);
+  border-color: var(--color-brand--2); /* Highlight border on hover */
+}
+
+.position {
+  font-weight: 600;
+  position: absolute;
+  z-index: 1000;
+  font-size: 1.4rem;
+  bottom: 4rem;
+  left: 50%;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+  box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16); /* Consistent shadow styling */
+  border-radius: 8px; /* Matches other buttons */
+  padding: 1rem 2rem; /* Adjusted for prominence */
 }

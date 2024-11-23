@@ -1,4 +1,4 @@
-.cityItem,
+/* .cityItem,
 .cityItem:link,
 .cityItem:visited {
   display: flex;
@@ -6,9 +6,7 @@
   align-items: center;
 
   background-color: var(--color-dark--2);
-  border-radius: 7px;
   padding: 1rem 2rem;
-  border-left: 5px solid var(--color-brand--2);
   cursor: pointer;
 
   color: inherit;
@@ -16,8 +14,7 @@
 }
 
 .cityItem--active {
-  border: 2px solid var(--color-brand--2);
-  border-left: 5px solid var(--color-brand--2);
+  border: 1px solid var(--color-brand--2);
 }
 
 .emoji {
@@ -27,18 +24,17 @@
 
 .name {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-right: auto;
 }
 
 .date {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .deleteBtn {
   height: 2rem;
   aspect-ratio: 1;
-  border-radius: 50%;
   border: none;
   background-color: var(--color-dark--1);
   color: var(--color-light--2);
@@ -51,4 +47,97 @@
 .deleteBtn:hover {
   background-color: var(--color-brand--1);
   color: var(--color-dark--1);
+} */
+
+.cityItem,
+.cityItem:link,
+.cityItem:visited {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+
+  background-color: var(--color-dark--2);
+  padding: 1.2rem 2.4rem; /* Slightly increased for better touch interaction */
+  border-radius: 8px; /* Added rounded corners for a modern feel */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  cursor: pointer;
+
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cityItem:hover {
+  background-color: var(--color-dark--1); /* Slightly brighter on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.cityItem--active {
+  border: 2px solid var(--color-brand--2); /* Enhanced border for visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Extra depth for active state */
+}
+
+.emoji {
+  font-size: 2.6rem;
+  line-height: 1;
+  flex-shrink: 0; /* Prevents shrinking on smaller screens */
+}
+
+.name {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-right: auto;
+  text-overflow: ellipsis; /* Handles long names gracefully */
+  overflow: hidden;
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+.date {
+  font-size: 1.4rem;
+  color: var(--color-light--3); /* Slightly dimmed for less visual weight */
+}
+
+.deleteBtn {
+  height: 2rem;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%; /* Circular button for aesthetics */
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.deleteBtn:hover {
+  background-color: var(--color-brand--1);
+  color: var(--color-dark--1);
+  transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+@media (max-width: 768px) {
+  .cityItem {
+    padding: 1rem 1.5rem; /* Adjusted for smaller screens */
+    gap: 1rem;
+  }
+
+  .emoji {
+    font-size: 2.2rem; /* Scaled down for better responsiveness */
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
+
+  .deleteBtn {
+    height: 1.8rem; /* Adjusted size for smaller screens */
+  }
 }

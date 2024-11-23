@@ -1,4 +1,4 @@
-.login {
+/* .login {
   margin: 2.5rem;
   padding: 2.5rem 5rem;
   background-color: var(--color-dark--1);
@@ -7,14 +7,12 @@
 
 .form {
   background-color: var(--color-dark--2);
-  border-radius: 7px;
   padding: 2rem 3rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 
-  /* Different from other form */
   width: 48rem;
   margin: 8rem auto;
 }
@@ -23,4 +21,83 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+} */
+
+.login {
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  box-sizing: border-box;
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  padding: 3rem 4rem; /* Increased padding for a more spacious feel */
+  width: 100%;
+  max-width: 48rem; /* Ensures form doesn’t stretch too much */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 5rem auto; /* Center the form with less top margin */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form h3 {
+  font-size: 2.2rem; /* Slightly larger heading for better emphasis */
+  color: var(--color-light--2); /* Ensures the heading is readable */
+  margin-bottom: 1.5rem; /* Space between the heading and form fields */
+}
+
+.input,
+.button {
+  padding: 1.2rem; /* Increased padding for better touch targets */
+  font-size: 1.6rem; /* Increased font size for readability */
+  border: 1px solid var(--color-dark--3);
+  border-radius: 6px;
+  color: var(--color-dark--1);
+}
+
+.input:focus,
+.button:focus {
+  border-color: var(--color-brand--2);
+  outline: none;
+}
+
+.button {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-brand--1);
+}
+
+@media (max-width: 768px) {
+  .login {
+    padding: 1.5rem; /* Reduced padding on smaller screens */
+  }
+
+  .form {
+    padding: 2.5rem 3rem; /* Adjusted form padding for better mobile fit */
+    margin: 3rem auto; /* Reduced top margin for better vertical alignment */
+  }
+
+  .form h3 {
+    font-size: 1.8rem; /* Adjusted heading size for mobile screens */
+  }
 }

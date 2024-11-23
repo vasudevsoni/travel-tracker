@@ -1,40 +1,52 @@
 {
   "cities": [
     {
-      "cityName": "Mumbai",
-      "country": "India",
-      "emoji": "🇮🇳",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "The city of dreams!",
+      "cityName": "San Francisco",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2024-11-23T12:02:55.981Z",
+      "notes": "",
       "position": {
-        "lat": 19.1074191,
-        "lng": 72.8882593
+        "lat": "37.927097922191074",
+        "lng": "-122.32900674261974"
       },
-      "id": 73930385
+      "id": 98443211
     },
     {
-      "cityName": "Madrid",
+      "cityName": "Vistabella del Maestrazgo",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "Beautiful",
+      "date": "2024-11-23T12:42:45.346Z",
+      "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "40.2733105170012",
+        "lng": "-0.33233642578125"
       },
-      "id": 17806751
+      "id": 98443215
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing",
+      "cityName": "Lai",
+      "country": "Chad",
+      "emoji": "🇹🇩",
+      "date": "2024-11-23T12:43:05.480Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "9.15616156617517",
+        "lng": "16.523437500000004"
       },
-      "id": 98443197
+      "id": 98443216
+    },
+    {
+      "cityName": "Balsorano",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2024-11-23T12:53:06.652Z",
+      "notes": "",
+      "position": {
+        "lat": "41.777327912299505",
+        "lng": "13.535156250000002"
+      },
+      "id": 98443217
     }
   ]
 }

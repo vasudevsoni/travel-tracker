@@ -3,8 +3,8 @@
 
 /* These CSS variables are global, so they are available in all CSS modules */
 :root {
-  --color-brand--1: #ffb545;
-  --color-brand--2: #00c46a;
+  --color-brand--1: #0bd265;
+  --color-brand--2: #3d77cf;
 
   --color-dark--0: #242a2e;
   --color-dark--1: #2d3439;
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--color-light--2);
   font-weight: 400;
   line-height: 1.6;
@@ -44,12 +44,12 @@ textarea {
   font-family: inherit;
   font-size: 1.6rem;
   border: none;
-  border-radius: 5px;
   background-color: var(--color-light--3);
   transition: all 0.2s;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
   background-color: #fff;
 }
@@ -64,7 +64,6 @@ input:focus {
   font-size: 1.6rem;
   font-weight: 600;
   padding: 1rem 3rem;
-  border-radius: 5px;
 }
 
 /*

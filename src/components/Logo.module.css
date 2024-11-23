@@ -1,3 +1,4 @@
 .logo {
-  height: 5.2rem;
+  height: 5rem;
+  object-fit: contain;
 }

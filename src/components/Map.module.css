@@ -1,4 +1,4 @@
-.mapContainer {
+/* .mapContainer {
   flex: 1;
   height: 100%;
   background-color: var(--color-dark--2);
@@ -9,11 +9,9 @@
   height: 100%;
 }
 
-/* Here we want to style classes that are coming from leaflet. So we want CSS Modules to give us the ACTUAL classnames, not to add some random ID to them, because then they won't match the classnames defined inside the map. The solution is to define these classes as GLOBAL */
 :global(.leaflet-popup .leaflet-popup-content-wrapper) {
   background-color: var(--color-dark--1);
   color: var(--color-light--2);
-  border-radius: 5px;
   padding-right: 0.6rem;
 }
 
@@ -31,8 +29,66 @@
 
 :global(.leaflet-popup .leaflet-popup-tip) {
   background-color: var(--color-dark--1);
+} */
+
+.mapContainer {
+  flex: 1;
+  height: 100%;
+  background-color: var(--color-dark--2);
+  position: relative;
+  border-radius: 8px; /* Rounded edges for a sleek look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adding shadow for depth */
 }
 
-:global(.leaflet-popup-content-wrapper) {
-  border-left: 5px solid var(--color-brand--2);
+.map {
+  height: 100%;
+  border-radius: 8px; /* Consistent rounded edges with map container */
+}
+
+/* Global Leaflet Popup Styles */
+:global(.leaflet-popup .leaflet-popup-content-wrapper) {
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  padding-right: 0.8rem; /* Increased padding for better content spacing */
+  border-radius: 8px; /* Rounded edges for popup */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+:global(.leaflet-popup .leaflet-popup-content) {
+  font-size: 1.6rem; /* Increased font size for readability */
+  display: flex;
+  align-items: center;
+  gap: 1.4rem; /* Adjusted gap for better content spacing */
+  padding: 1rem;
+}
+
+:global(.leaflet-popup .leaflet-popup-content span:first-child) {
+  font-size: 2.8rem; /* Larger icon/text for better emphasis */
+  line-height: 1;
+}
+
+:global(.leaflet-popup .leaflet-popup-tip) {
+  background-color: var(--color-dark--1);
+  border-radius: 4px; /* Rounded edges for the popup tip */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mapContainer {
+    border-radius: 6px; /* Adjusted for smaller screens */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow for smaller screens */
+  }
+
+  .leaflet-popup .leaflet-popup-content-wrapper {
+    padding-right: 0.6rem; /* Reduced padding for compact design */
+  }
+
+  .leaflet-popup .leaflet-popup-content {
+    font-size: 1.4rem; /* Adjusted font size for smaller screens */
+    gap: 1.2rem; /* Reduced gap for compact design */
+  }
+
+  .leaflet-popup .leaflet-popup-content span:first-child {
+    font-size: 2.6rem; /* Scaled down for smaller viewports */
+  }
 }

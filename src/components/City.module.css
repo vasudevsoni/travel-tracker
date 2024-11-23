@@ -1,10 +1,7 @@
-.city {
-  padding: 2rem 3rem;
+/* .city {
+  padding: 2.5rem;
   max-height: 70%;
   background-color: var(--color-dark--2);
-  border-radius: 7px;
-  overflow: scroll;
-
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,28 +17,99 @@
 .city h6 {
   text-transform: uppercase;
   font-size: 1.1rem;
-  font-weight: 900;
+  font-weight: 500;
   color: var(--color-light--1);
 }
 
 .city h3 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   display: flex;
+  font-weight: 600;
   align-items: center;
   gap: 1rem;
 }
 
-.city h3 span {
-  font-size: 3.2rem;
-  line-height: 1;
-}
-
 .city p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .city a:link,
 .city a:visited {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--color-brand--1);
+} */
+
+.city {
+  padding: 2.5rem;
+  max-height: 70%;
+  background-color: var(--color-dark--2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem; /* Slightly increased for better visual breathing space */
+  border-radius: 8px; /* Rounded edges for a polished look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow-y: auto; /* Ensures content doesn't overflow */
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Slightly increased gap for clearer separation */
+}
+
+.city h6 {
+  text-transform: uppercase;
+  font-size: 1.2rem; /* Slightly larger for better readability */
+  font-weight: 500;
+  color: var(--color-light--1);
+  letter-spacing: 0.05rem; /* Adds slight spacing for cleaner text */
+}
+
+.city h3 {
+  font-size: 2rem; /* Increased for visual prominence */
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  gap: 1.2rem; /* Improved spacing between icon and text */
+  color: var(--color-light--2); /* Enhanced contrast for headers */
+}
+
+.city p {
+  font-size: 1.6rem; /* Slightly increased for better readability */
+  line-height: 1.6; /* Added line height for clearer paragraph spacing */
+  color: var(--color-light--3); /* Softer color for less visual strain */
+}
+
+.city a:link,
+.city a:visited {
+  font-size: 1.4rem;
+  color: var(--color-brand--1);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.city a:hover {
+  color: var(--color-brand--2); /* Slightly lighter on hover */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle glow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .city {
+    padding: 2rem;
+    gap: 1.6rem; /* Adjusted for smaller screens */
+  }
+
+  .city h3 {
+    font-size: 1.8rem; /* Slightly reduced size */
+  }
+
+  .city p {
+    font-size: 1.4rem; /* Adjusted for better fit */
+  }
+
+  .row {
+    gap: 0.6rem; /* Reduced gap for compact design */
+  }
 }

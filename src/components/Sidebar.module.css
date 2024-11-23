@@ -1,8 +1,7 @@
-.sidebar {
+/* .sidebar {
   flex-basis: 56rem;
   background-color: var(--color-dark--1);
-  padding: 3rem 5rem 3.5rem 5rem;
-
+  padding: 3rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,4 +15,51 @@
 .copyright {
   font-size: 1.2rem;
   color: var(--color-light--1);
+} */
+
+.sidebar {
+  flex-basis: 56rem;
+  background-color: var(--color-dark--1);
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 4.8rem);
+  border-right: 1px solid var(--color-dark--2); /* Added border for separation */
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px 0 0 8px; /* Rounded corners on the left */
+}
+
+.sidebar .footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--color-light--1);
+  margin-top: 1.5rem; /* Added margin for spacing */
+  opacity: 0.8; /* Subtle transparency for a softer appearance */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    flex-basis: 40rem; /* Reduced width for tablets */
+    padding: 2rem 3rem; /* Adjusted padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-basis: 100%; /* Full width for mobile */
+    padding: 2rem; /* Adjusted padding for mobile screens */
+    border-right: none; /* Removed border on mobile */
+    border-radius: 0; /* Removed rounded corners on mobile */
+  }
+
+  .copyright {
+    font-size: 1rem; /* Smaller font size for mobile */
+    margin-top: 1rem; /* Adjusted margin for better spacing */
+  }
 }

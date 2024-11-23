@@ -1,6 +1,5 @@
-.form {
+/* .form {
   background-color: var(--color-dark--2);
-  border-radius: 7px;
   padding: 2rem 3rem;
   width: 100%;
   display: flex;
@@ -41,4 +40,76 @@
 :global(.react-datepicker) {
   font-family: inherit;
   font-size: 1.2rem;
+} */
+
+.form {
+  background-color: var(--color-dark--2);
+  padding: 2.4rem 3.2rem; /* Slightly increased padding for better spacing */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 8px; /* Rounded edges for modern design */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth loading effect */
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Increased gap for better separation between elements */
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; /* Added gap for better spacing between buttons */
+}
+
+.flag {
+  position: absolute;
+  right: 1.2rem; /* Adjusted for consistent padding */
+  top: 2.8rem;
+  font-size: 3rem; /* Slightly larger for emphasis */
+  color: var(--color-brand--2); /* Highlighted for better visibility */
+}
+
+.form.loading {
+  opacity: 0.5; /* Increased opacity for better feedback */
+  transform: scale(0.98); /* Subtle shrink effect for visual feedback */
+}
+
+.form.loading button {
+  pointer-events: none;
+  background-color: var(--color-light--1);
+  border: 1px solid var(--color-light--1);
+  color: var(--color-dark--0);
+  cursor: not-allowed; /* Added cursor style for better user experience */
+}
+
+:global(.react-datepicker) {
+  font-family: inherit;
+  font-size: 1.3rem; /* Slightly increased for better readability */
+  background-color: var(--color-dark--1); /* Matches dark theme */
+  color: var(--color-light--2); /* Ensures readability */
+  border-radius: 6px; /* Rounded edges for consistency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow for a polished look */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form {
+    padding: 1.6rem 2.4rem; /* Adjusted padding for smaller screens */
+  }
+
+  .flag {
+    top: 2.4rem; /* Adjusted position for smaller viewports */
+    font-size: 2.6rem; /* Scaled down for compact layout */
+  }
+
+  .buttons {
+    flex-direction: column; /* Stacks buttons vertically */
+    gap: 1.2rem; /* Increased gap for better vertical spacing */
+  }
 }

@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
@@ -7,7 +7,6 @@
   list-style: none;
   display: flex;
   background-color: var(--color-dark--2);
-  border-radius: 7px;
 }
 
 .nav a:link,
@@ -19,10 +18,59 @@
   font-size: 1.2rem;
   font-weight: 700;
   padding: 0.5rem 2rem;
-  border-radius: 5px;
 }
 
-/* CSS Modules feature */
 .nav a:global(.active) {
   background-color: var(--color-dark--0);
+} */
+
+.nav {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  background-color: var(--color-dark--2);
+  border-radius: 8px; /* Rounded edges for a modern look */
+  overflow: hidden; /* Ensures no child elements overflow the rounded container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nav a:link,
+.nav a:visited {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem; /* Slightly increased for better readability */
+  font-weight: 700;
+  padding: 0.8rem 2rem; /* Adjusted for more comfortable touch zones */
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.nav a:hover {
+  background-color: var(--color-dark--1); /* Subtle lightening on hover */
+  color: var(--color-brand--2); /* Highlight text color */
+  transform: translateY(-2px); /* Slight lift effect for interactivity */
+}
+
+.nav a:global(.active) {
+  background-color: var(--color-dark--0);
+  color: var(--color-brand--2); /* Highlight for active link */
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2); /* Extra depth for active state */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .nav a:link,
+  .nav a:visited {
+    font-size: 1.2rem; /* Slightly smaller for compact design */
+    padding: 0.6rem 1.5rem; /* Adjusted padding for smaller screens */
+  }
 }

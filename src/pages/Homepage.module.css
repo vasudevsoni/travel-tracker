@@ -1,4 +1,4 @@
-.homepage {
+/* .homepage {
   height: calc(100vh - 5rem);
   margin: 2.5rem;
   background-image: linear-gradient(
@@ -23,12 +23,76 @@
 
 .homepage h1 {
   font-size: 4.5rem;
+  font-weight: 900;
   line-height: 1.3;
 }
 
 .homepage h2 {
   width: 90%;
-  font-size: 1.9rem;
+  font-size: 2rem;
+  font-weight: 500;
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
+} */
+
+.homepage {
+  height: calc(100vh - 5rem);
+  margin: 2.5rem;
+  background-image: linear-gradient(
+      rgba(36, 42, 46, 0.8),
+      rgba(36, 42, 46, 0.8)
+    ),
+    url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem 5rem;
+  border-radius: 10px; /* Soft rounded corners for modern look */
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage section {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: center;
+  color: var(
+    --color-light--2
+  ); /* Ensures text stands out against dark background */
+}
+
+.homepage h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.3;
+  color: var(--color-light--2); /* Added for contrast */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Adds depth to the header */
+}
+
+.homepage h2 {
+  width: 90%;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-light--1);
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for clarity */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homepage {
+    padding: 2rem; /* Adjusted padding for smaller screens */
+  }
+
+  .homepage h1 {
+    font-size: 3.5rem; /* Reduced font size for better readability on mobile */
+  }
+
+  .homepage h2 {
+    font-size: 1.6rem; /* Smaller font size for mobile devices */
+  }
 }

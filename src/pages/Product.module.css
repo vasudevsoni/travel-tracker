@@ -1,4 +1,4 @@
-.product {
+/* .product {
   margin: 2.5rem;
   padding: 2.5rem 5rem;
   background-color: var(--color-dark--1);
@@ -31,4 +31,82 @@
 
 .product section a {
   margin-top: 2rem;
+} */
+
+.product {
+  margin: 2.5rem;
+  padding: 3rem 5rem; /* Slightly increased padding for a more spacious look */
+  background-color: var(--color-dark--1);
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px; /* Soft rounded corners for modern look */
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+}
+
+.product section {
+  width: clamp(80rem, 80%, 90rem);
+  margin: 6rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  align-items: center;
+  text-align: center; /* Centered content inside grid */
+}
+
+.product section img {
+  width: 100%;
+  border-radius: 8px; /* Softens image borders */
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.product h2 {
+  font-size: 3.5rem; /* Slightly reduced size for balance */
+  line-height: 1.3;
+  font-weight: 700; /* Increased font weight for more emphasis */
+  margin-bottom: 3rem;
+  color: var(--color-light--2); /* Ensures good contrast and readability */
+}
+
+.product p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--color-light--1); /* Makes the description text easier to read */
+}
+
+.product section a {
+  margin-top: 2rem;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.product section a:hover {
+  background-color: var(--color-brand--1);
+}
+
+@media (max-width: 768px) {
+  .product section {
+    grid-template-columns: 1fr; /* Stacks the content on smaller screens */
+    gap: 3rem;
+  }
+
+  .product h2 {
+    font-size: 2.5rem; /* Adjusted heading size for mobile */
+  }
+
+  .product p {
+    font-size: 1.4rem; /* Adjusted paragraph size for readability */
+  }
+
+  .product section a {
+    width: 100%; /* Full-width button on mobile */
+    text-align: center;
+  }
 }
