@@ -3,13 +3,6 @@
 <p><strong>Travel-Tracker</strong> is an interactive React.js application that lets users track their travels around the world. Mark cities you've visited on a map, view statistics on the cities and countries you've explored, and log in to save your personalized travel history!</p>
 
 
-
-<h2>🌐 <strong>Live Demo</strong></h2>
-
-<p>A live version of Travel-Tracker can be found <a href="#" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>. <!-- Replace with actual link if hosted --></p>
-
-
-
 <h2>📚 <strong>Table of Contents</strong></h2>
 <ul style="font-size: 1.1rem;">
   <li><a href="#features" style="text-decoration: none; color: #333;">Features</a></li>
