@@ -34,7 +34,7 @@
 <h2 id="installation">⚙️ <strong>Installation</strong></h2>
 <ol style="font-size: 1.1rem;">
   <li><strong>Clone the repository:</strong>
-    <pre><code>git clone https://github.com/yourusername/travel-tracker.git
+    <pre><code>git clone https://github.com/vasudevsoni/travel-tracker.git
 cd travel-tracker
     </code></pre>
   </li>
