@@ -22,7 +22,7 @@ function City() {
     function () {
       getCity(id);
     },
-    [id]
+    [id, getCity]
   );
 
   const { cityName, date, notes } = currentCity;

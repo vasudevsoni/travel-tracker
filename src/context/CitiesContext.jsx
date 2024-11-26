@@ -1,10 +1,16 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+  useCallback,
+} from "react";
 
 const CitiesContext = createContext();
 
 const URL = "http://localhost:9000";
 
-function CitiesProvider({ children }) {
+export function CitiesProvider({ children }) {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentCity, setCurrentCity] = useState({});
@@ -27,18 +33,22 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  async function getCity(id) {
-    try {
-      setIsLoading(true);
-      const res = await fetch(`${URL}/cities/${id}`);
-      const data = await res.json();
-      setCurrentCity(data);
-    } catch {
-      alert("There was an error fetching the data!!");
-    } finally {
-      setIsLoading(false);
-    }
-  }
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (Number(id) === currentCity.id) return;
+      try {
+        setIsLoading(true);
+        const res = await fetch(`${URL}/cities/${id}`);
+        const data = await res.json();
+        setCurrentCity(data);
+      } catch {
+        alert("There was an error fetching the data!!");
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [currentCity.id]
+  );
 
   async function createCity(newCity) {
     try {
@@ -87,11 +97,9 @@ function CitiesProvider({ children }) {
   );
 }
 
-function useCities() {
+export function useCities() {
   const context = useContext(CitiesContext);
   if (context === undefined)
     throw new Error("CitiesContext was used outside the CitiesProvider");
   return context;
 }
-
-export { CitiesProvider, useCities };
