@@ -41,14 +41,11 @@ cd travel-tracker
   <li><strong>Install dependencies:</strong>
     <pre><code>npm install</code></pre>
   </li>
-  <li><strong>Set up the environment:</strong>
-    <p>Create a <code>.env</code> file in the root directory and include the following:</p>
-    <pre><code>REACT_APP_MAP_API_KEY=your_map_api_key
-REACT_APP_AUTH_API_KEY=your_auth_api_key
-    </code></pre>
+  <li><strong>Start the fake json server:</strong>
+    <pre><code>npm run server</code></pre>
   </li>
   <li><strong>Start the development server:</strong>
-    <pre><code>npm start</code></pre>
+    <pre><code>npm run dev</code></pre>
   </li>
   <li><strong>Build for production:</strong>
     <pre><code>npm run build</code></pre>
